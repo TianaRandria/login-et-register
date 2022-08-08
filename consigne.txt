@@ -1,0 +1,24 @@
+Dans ce projet il vous sera demandé de faire un formulaire de login fonctionnel
+
+Tout d'abord il vous faudra créer une table user dans votre base de données suivant la structure suivante : 
+
+|//**id_user**//|int(11)|Non|
+|login_user|varchar(255)|Non|
+|password_user|varchar(255)|Non|
+
+Une fois la base de données créée, dans le fichier connect.php, réalisez la connexion à celle-ci, puis créez deux fonctions :
+
+register() et login()
+
+register() vous permettra d'ajouter un nouvel utilisateur dans la table user.
+login() vous permettra de vérifier qu'un utilisateur est bien dans la table en vérifiant que l'identifiant et le mot de passe saisi sont les bons.
+
+Attention, il va de soi que le mot de passe enregistré en base de données ne doit pas être en clair et par conséquent devra être codé pour que son décryptage soit plus compliqué en cas d'interception.
+
+La fonction register si tout c'est bien passé renverra l'utilisateur vers la page de login, dans le cas contraire un message devra apparaitre.
+
+La fonction register renverra quant à elle deux messages : 
+- "Valid username and password" : si l'identifiant et le mot de passe sont corrects
+- "Invalid username or password" : si l'identifiant ou le mot de passe sont incorrects
+
+Les fonctions ne seront déclanchées que si des conditions renseignées dans le fichier login.php sont valides
